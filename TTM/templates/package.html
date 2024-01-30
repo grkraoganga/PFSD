@@ -1,0 +1,27 @@
+{% extends 'adminhome.html' %}
+{% block 'b1' %}
+<h2 align="center"><font color="green"> Sign-up </font> </h2>
+<form method="post" action= "{% url 'checkpackage' %}">
+    {% csrf_token %}
+    <table align="center" border="2">
+        <td> Enter Tour Code   </td>
+            <td> <input type="text" name="tourcode" required/> </td>
+        </tr>
+        <tr>
+        <td>Enter Tour Name </td>
+            <td><input type="text" name="tourname" required/></td>
+        </tr>
+        <td> Enter Tour Package  </td>
+            <td> <input type="text" name="tourpackage" required/> </td>
+        </tr>
+        <tr>
+        <td>Enter Description </td>
+            <td><input type="text" name="desc" required/></td>
+        </tr>
+    <tr>
+           <td align="center"><input type="submit" value="Insert"></td>
+            <td align="center"><input type="reset" value="Clear"></td>
+    </tr>
+    </table>
+</form>
+{% endblock %}

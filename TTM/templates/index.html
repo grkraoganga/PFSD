@@ -1,0 +1,25 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tourism & Travel Management</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+</head>
+<body>
+<a href="{% url 'registration' %}"> Sign-up | </a>
+<a href="{% url 'passwdchange' %}"> Change Password | </a>
+<a href="{% url 'login' %}"> Login | </a>
+<a href="{% url '' %}"> Home | </a>
+<a href="{% url 'contact' %}"> Contact us | </a>
+<br>
+{% block 'b1' %}
+ <h2 align="center"> <font color="green">KLU Tourism & Travel Management</font> </h2>
+<div>
+    {% for message in messages %}
+    <h4 align="center" style="color: red;">{{message}}</h4>
+    {% endfor %}
+</div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tourism & Travel Management</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+</head>
+<body>
+<a href="{% url 'registration' %}"> Sign-up | </a>
+<a href="{% url 'login' %}"> Login | </a>
+<a href="{% url 'viewplaces' %}"> View Places | </a>
+<a href="{% url '' %}"> Home | </a>
+<a href="{% url 'contact' %}"> Contact us | </a>
+<br>
+{% block 'b1' %}
+ <h2 align="center"> <font color="green">Welcome Tourism & Travel Management</font> </h2>
+{% endblock %}
+</body>
+</html>
+
+
+
